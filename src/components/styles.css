@@ -10,15 +10,17 @@
 .product-card {
 
     border: 1px solid #ddd;
-    padding: 15px;
+    padding: 18px;
     border-radius: 5px;
     width: 300px;
     text-align: center;
 }
 .product-card img{
-    width: 250px;
+    width: 200px;
 }
-
+.product-card img:hover{
+    transform: scale(1.1); 
+}
 
 .categories button.active {
     background-color: red;
@@ -99,4 +101,30 @@
 
 .dot.active {
     background-color: red;
+}
+
+
+
+/* allproducts */
+
+.allproducts {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.allproducts-card {
+
+    border: 1px solid #ddd;
+    padding: 18px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+.allproducts-card img{
+    width: 200px;
+}
+.allproducts-card img:hover{
+    transform: scale(1.1); 
 }

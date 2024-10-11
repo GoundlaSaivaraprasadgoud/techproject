@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import productsData from './productsData';
 import './styles.css';
+import { Link } from 'react-router-dom';
+
 
 const ProductList = () => {
     const [selectedCategory, setSelectedCategory] = useState('All'); // Initial category is 'All'
@@ -38,6 +40,7 @@ const ProductList = () => {
                 {filteredProducts.slice(0, 11).map(product => (
                     <div key={product.id} className="product-card">
                         <img src={product.images[0]} alt={product.title} />
+                        <div>
                         <p>{product.rateCount} </p>
                         <h2>{product.title}</h2>
                         <p>{product.info}</p>
@@ -46,8 +49,14 @@ const ProductList = () => {
                         <strike><p>₹{product.originalPrice}</p></strike>
                         
                         <button>Add to Cart</button>
+                        </div>
+                        
                     </div>
                 ))}
+                <div  className="product-card ">
+                    <Link to="/allproducts">
+                    <h3 >Browse All Categories</h3></Link>
+                </div>
             </div>
         </div>
     );

@@ -5,6 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import Header from './components/header';
 import ProductList from './components/ProductList';
 import HeroProductSlider from './components/HeroProductSlider';
+import Routing from './Router/Routing';
 
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
    <>
 
      <Header/>
-     <HeroProductSlider/>
-     <ProductList/>
+     <Routing/>
+     {/* <HeroProductSlider/>
+     <ProductList/> */}
     
    </>
  
