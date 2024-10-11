@@ -3,6 +3,7 @@ import {Route ,Routes} from 'react-router-dom';
 import ProductList from "../components/ProductList";
 import AllProducts from "../components/AllProducts";
 import HeroProductSlider from "../components/HeroProductSlider";
+import ProductDetails from "../components/ProductDetails";
 
 
 
@@ -14,6 +15,11 @@ const Routing = ()=>{
                 <HeroProductSlider/>
                 <ProductList />
             </>} />
+
+            <Route path="/product/:id" element={<>
+                <ProductDetails/>
+                
+            </>}/>
 
         
 

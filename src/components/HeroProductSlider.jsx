@@ -34,7 +34,9 @@ const HeroProductSlider = () => {
                         <p>Price: ₹{heroProducts[currentIndex].finalPrice}</p>
                         <strike><p>₹{heroProducts[currentIndex].originalPrice}</p></strike>
                     </div>
-                    <button>shop now</button>
+                    <Link to={`/product/${heroProducts[currentIndex].id}`} className="shop-now">
+                        Shop Now
+                    </Link>
                 </div>
                 <div className="slider-image">
                     <img src={heroProducts[currentIndex].heroImage} alt={heroProducts[currentIndex].title} />
