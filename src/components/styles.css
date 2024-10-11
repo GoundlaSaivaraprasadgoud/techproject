@@ -18,3 +18,21 @@
 .product-card img{
     width: 250px;
 }
+
+
+.categories button.active {
+    background-color: #333;
+    color: white;
+}
+.categories button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+.categories button:hover {
+    background-color: #aaa;
+}
+
