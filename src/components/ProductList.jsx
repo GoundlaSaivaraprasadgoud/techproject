@@ -45,7 +45,7 @@ const ProductList = () => {
                         <p>₹{product.finalPrice}</p>
                         <strike><p>₹{product.originalPrice}</p></strike>
                         
-                        <a href={product.path}>View Details</a>
+                        <button>Add to Cart</button>
                     </div>
                 ))}
             </div>

@@ -21,7 +21,7 @@
 
 
 .categories button.active {
-    background-color: #333;
+    background-color: red;
     color: white;
 }
 .categories button {
@@ -29,10 +29,74 @@
     margin: 5px;
     border: none;
     cursor: pointer;
-    background-color: #ddd;
+    background-color: transparent;
+    color:white;
 }
 
 .categories button:hover {
-    background-color: #aaa;
+    background-color: #adaaaa;
 }
 
+
+
+/* slider Styles */
+.slider {
+
+    position: relative;
+    width: 100%;
+    max-width: 1000px;  
+    margin:50px auto;
+    overflow: hidden;
+    
+}
+
+.slider-content {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    text-align: center;
+}
+
+.slider-info {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.slider-image img {
+    width: 60%;
+    height: auto;     /*Resp image*/
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-info button{
+    background-color: red;
+}
+
+
+.navigation-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    /* display: inline-block; */
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: red;
+}
