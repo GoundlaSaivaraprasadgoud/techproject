@@ -27,7 +27,9 @@ const RelatedProducts = () =>{
                                 </Link>
                                     <h3>{relatedProduct.title}</h3>
                                     <p>Price: ₹{relatedProduct.finalPrice}</p>
-                                
+                                    <div>
+                                        <button  >Add to Cart</button>
+                                    </div>
                             </div>
                         ))
                     ) : (

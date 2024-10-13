@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import productsData from './productsData';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import {useDispatch} from "react-redux";
+import { addToCart } from '../redux/actionCreator/ProductAction';
 
 
 const ProductList = () => {
-    const [selectedCategory, setSelectedCategory] = useState('All'); // Initial category is 'All'
+    const [selectedCategory, setSelectedCategory] = useState('All');
+
+    const dispatch=useDispatch();
 
     // Function to filter products based on selected category
     const filteredProducts = selectedCategory === 'All'
@@ -50,7 +54,7 @@ const ProductList = () => {
                         <p>₹{product.finalPrice}</p>
                         <strike><p>₹{product.originalPrice}</p></strike>
                         
-                        <Link  ><button>Add to Cart</button></Link>
+                        <button   onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
                         </div>
                         
                     </div>

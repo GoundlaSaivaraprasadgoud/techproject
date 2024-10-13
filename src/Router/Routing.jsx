@@ -5,6 +5,7 @@ import AllProducts from "../components/AllProducts";
 import HeroProductSlider from "../components/HeroProductSlider";
 import ProductDetails from "../components/ProductDetails";
 import RelatedProducts from "../components/RelatedProducts";
+import Cart from "../components/Cart";
 
 
 
@@ -24,6 +25,7 @@ const Routing = ()=>{
 
 
         <Route path="/allproducts" element={<AllProducts/>}/>
+        <Route path="/Cart" element={<Cart/>}/>
 
     </Routes>
     );

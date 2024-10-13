@@ -3,10 +3,14 @@ import { useParams } from 'react-router-dom';
 import productsData from './productsData';
 import './styles.css';
 
+
+
 const ProductDetails = () => {
     const { id } = useParams(); 
     const product = productsData.find(item => item.id === parseInt(id));
     const [imageSelected, setimageSelected] = useState(product.images[0]);
+
+
 
    
     const handleImageClick = (image) => {
@@ -42,7 +46,11 @@ const ProductDetails = () => {
                     <strike>Original Price: ₹{product.originalPrice}</strike>
                 </div>
                 <hr />
+                <div>
+                    <button  >Add to Cart</button>
+                </div>
             </div>
+            
 
             
         </div>

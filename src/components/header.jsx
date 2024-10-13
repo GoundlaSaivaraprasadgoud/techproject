@@ -32,7 +32,7 @@ function Header() {
           {/* Icons */}
           
             {/* Cart Icon */}
-            <Link class="nav-link active" aria-current="page" to="/">
+            <Link class="nav-link active" aria-current="page" to="/Cart">
               <i className="bi bi-cart3 mx-5" style={{ fontSize: '1.5rem' }}></i>
             </Link>
 
