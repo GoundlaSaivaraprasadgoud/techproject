@@ -39,7 +39,9 @@ const ProductList = () => {
             <div className="products">
                 {filteredProducts.slice(0, 11).map(product => (
                     <div key={product.id} className="product-card">
-                        <img src={product.images[0]} alt={product.title} />
+                        <Link to={`/product/${product.id}`}>
+                            <img src={product.images[0]} alt={product.title} />
+                        </Link>
                         <div>
                         <p>{product.rateCount} </p>
                         <h2>{product.title}</h2>
@@ -48,7 +50,7 @@ const ProductList = () => {
                         <p>₹{product.finalPrice}</p>
                         <strike><p>₹{product.originalPrice}</p></strike>
                         
-                        <button>Add to Cart</button>
+                        <Link  >Add to Cart</Link>
                         </div>
                         
                     </div>

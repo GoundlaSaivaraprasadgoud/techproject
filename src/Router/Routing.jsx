@@ -18,10 +18,9 @@ const Routing = ()=>{
 
             <Route path="/product/:id" element={<>
                 <ProductDetails/>
-                
+            
             </>}/>
 
-        
 
         <Route path="/allproducts" element={<AllProducts/>}/>
 
