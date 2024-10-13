@@ -4,6 +4,7 @@ import ProductList from "../components/ProductList";
 import AllProducts from "../components/AllProducts";
 import HeroProductSlider from "../components/HeroProductSlider";
 import ProductDetails from "../components/ProductDetails";
+import RelatedProducts from "../components/RelatedProducts";
 
 
 
@@ -18,7 +19,7 @@ const Routing = ()=>{
 
             <Route path="/product/:id" element={<>
                 <ProductDetails/>
-            
+                <RelatedProducts/>
             </>}/>
 
 

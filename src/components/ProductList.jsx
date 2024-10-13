@@ -50,7 +50,7 @@ const ProductList = () => {
                         <p>₹{product.finalPrice}</p>
                         <strike><p>₹{product.originalPrice}</p></strike>
                         
-                        <Link  >Add to Cart</Link>
+                        <Link  ><button>Add to Cart</button></Link>
                         </div>
                         
                     </div>
