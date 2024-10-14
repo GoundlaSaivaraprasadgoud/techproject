@@ -28,9 +28,10 @@ const HeroProductSlider = () => {
         <div className="slider">
             <div className="slider-content">
                 <div className="slider-info">
-                    <h2>{heroProducts[currentIndex].title}</h2>
-                    <h2>{heroProducts[currentIndex].tagline}</h2>
-                    <div>
+                    
+                        <p className='title'>{heroProducts[currentIndex].title}</p>
+                        <h1 className='tagline'>{heroProducts[currentIndex].tagline}</h1>
+                    <div className='price'>
                         <p>Price: ₹{heroProducts[currentIndex].finalPrice}</p>
                         <strike><p>₹{heroProducts[currentIndex].originalPrice}</p></strike>
                     </div>

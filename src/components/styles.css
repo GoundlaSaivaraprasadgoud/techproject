@@ -36,6 +36,10 @@
 .product-card img{
     width: 200px;
 }
+.product-card button{
+    width: 100%;
+}
+
 .product-card img:hover{
     transform: scale(1.1); 
 }
@@ -79,9 +83,23 @@
 
 .slider-info {
     margin-bottom: 20px;
+    font-family: sans-serif;
     width: 100%;
+
+}
+.title{
+    font-size: larger;
+}
+.tagline{
+    font-weight: bolder;
 }
 
+
+.price{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
 .slider-image img {
     width: 60%;
     height: auto;     /*Resp image*/
@@ -206,3 +224,24 @@
 .product-info p {
     margin-bottom: 10px;
 }
+
+
+
+/* gg */
+.all-products-container {
+    display: flex;
+    gap: 20px;
+}
+
+.filter-sidebar {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-sidebar h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+

@@ -49,14 +49,16 @@ const ProductList = () => {
                             </Link>
                         </div>
                         <div>
-                        {/* <p>{product.rateCount} </p> */}
-                        <h2>{product.title}</h2>
-                        <p className='pinfo'>{product.info}</p>
-                        <hr />
-                        <p>₹{product.finalPrice}</p>
-                        <strike><p>₹{product.originalPrice}</p></strike>
-                        
-                        <button className='btn btn-danger'  onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
+                            {/* <p>{product.rateCount} </p> */}
+                            <h2>{product.title}</h2>
+                            <p className='pinfo'>{product.info}</p>
+                            <hr />
+                            <div className='price'>
+                                <p>₹{product.finalPrice}</p>
+                                <strike><p>₹{product.originalPrice}</p></strike>
+                            </div>
+                            
+                             <button className='btn btn-danger'  onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
                         </div>
                         
                     </div>
