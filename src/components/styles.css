@@ -15,6 +15,24 @@
     width: 300px;
     text-align: center;
 }
+
+.product-card h2{
+    font-size: large;
+    font-weight: bolder;
+}
+/* .pcimg{
+    height: 50%;
+    background-color: rgb(54, 54, 54);
+    padding: 10px;
+} */
+.product-card .pinfo{
+    font-size: small;
+}
+.browse{
+    position: relative;
+    top: 150px;
+    
+}
 .product-card img{
     width: 200px;
 }
@@ -130,8 +148,14 @@
 }
 
 
+.allproducts-card .title {
+    font-size: large;
+    font-weight: bolder;
+}
 
-
+.allproducts-card  .pinfo{
+    font-size: small;
+}
 
 
 /* productsdetails */

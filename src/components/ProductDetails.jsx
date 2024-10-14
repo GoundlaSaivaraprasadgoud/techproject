@@ -2,22 +2,20 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom'; 
 import productsData from './productsData';
 import './styles.css';
-
+import {useDispatch} from "react-redux";
+import { addToCart } from '../redux/actionCreator/ProductAction';
 
 
 const ProductDetails = () => {
     const { id } = useParams(); 
     const product = productsData.find(item => item.id === parseInt(id));
     const [imageSelected, setimageSelected] = useState(product.images[0]);
+    const dispatch=useDispatch();
 
 
-
-   
     const handleImageClick = (image) => {
         setimageSelected(image);
     };
-
-    
 
     return (
        
@@ -40,21 +38,18 @@ const ProductDetails = () => {
                 <h1>{product.title}</h1>
                 <p>{product.info}</p>
                 <p>{product.rateCount} | {product.ratings} Ratings</p>
-                <hr />
+                <hr/>
                 <div>
                     <p>Price: ₹{product.finalPrice}</p>
                     <strike>Original Price: ₹{product.originalPrice}</strike>
                 </div>
-                <hr />
+                <hr/>
                 <div>
-                    <button  >Add to Cart</button>
+                    <button className='btn btn-danger'  onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
                 </div>
             </div>
             
-
-            
         </div>
-
 
     );
 };

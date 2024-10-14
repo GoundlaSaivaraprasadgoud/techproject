@@ -25,9 +25,16 @@ export const productReducer=(state=initialState,action)=>{
             };
             localStorage.setItem('cartData', JSON.stringify(updatedCartData));
             return { ...state, cartData: updatedCartData };
+        
+                    
+         case "REMOVE_FROM_CART":
+            const filterProduct=state.cartData.filter((cartProduct)=>cartProduct.id!==action.payload);
+               localStorage.setItem('cartData', JSON.stringify(filterProduct));
+                   return{
+                   ...state,cartData:filterProduct,
+            }
             
         default:
      return state;
-
     }
 };

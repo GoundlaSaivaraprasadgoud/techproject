@@ -2,11 +2,14 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom'; 
 import productsData from './productsData';
 import './styles.css';
+import {useDispatch} from "react-redux";
+import { addToCart } from '../redux/actionCreator/ProductAction';
 
 
 const RelatedProducts = () =>{
     const { id } = useParams(); 
     const product = productsData.find(p => p.id === parseInt(id));
+    const dispatch=useDispatch();
 
     const relatedProducts = productsData.filter(
         (p) => p.category === product.category && p.id !== product.id
@@ -28,7 +31,7 @@ const RelatedProducts = () =>{
                                     <h3>{relatedProduct.title}</h3>
                                     <p>Price: ₹{relatedProduct.finalPrice}</p>
                                     <div>
-                                        <button  >Add to Cart</button>
+                                        <button className='btn btn-danger' onClick={()=>dispatch(addToCart(relatedProduct))} >Add to Cart</button>
                                     </div>
                             </div>
                         ))

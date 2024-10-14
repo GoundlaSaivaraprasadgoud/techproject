@@ -43,25 +43,27 @@ const ProductList = () => {
             <div className="products">
                 {filteredProducts.slice(0, 11).map(product => (
                     <div key={product.id} className="product-card">
-                        <Link to={`/product/${product.id}`}>
-                            <img src={product.images[0]} alt={product.title} />
-                        </Link>
+                        <div className='pcimg'>
+                            <Link to={`/product/${product.id}`}>
+                                <img src={product.images[0]} alt={product.title} />
+                            </Link>
+                        </div>
                         <div>
-                        <p>{product.rateCount} </p>
+                        {/* <p>{product.rateCount} </p> */}
                         <h2>{product.title}</h2>
-                        <p>{product.info}</p>
+                        <p className='pinfo'>{product.info}</p>
                         <hr />
                         <p>₹{product.finalPrice}</p>
                         <strike><p>₹{product.originalPrice}</p></strike>
                         
-                        <button   onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
+                        <button className='btn btn-danger'  onClick={()=>dispatch(addToCart(product))}>Add to Cart</button>
                         </div>
                         
                     </div>
                 ))}
                 <div  className="product-card ">
                     <Link to="/allproducts">
-                    <h3 >Browse All Categories</h3></Link>
+                    <h3 className='browse' >Browse All Categories</h3></Link>
                 </div>
             </div>
         </div>

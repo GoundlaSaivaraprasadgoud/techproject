@@ -34,7 +34,7 @@ const HeroProductSlider = () => {
                         <p>Price: ₹{heroProducts[currentIndex].finalPrice}</p>
                         <strike><p>₹{heroProducts[currentIndex].originalPrice}</p></strike>
                     </div>
-                    <Link to={`/product/${heroProducts[currentIndex].id}`} className="shop-now">
+                    <Link to={`/product/${heroProducts[currentIndex].id}`} className="shop-now btn btn-danger">
                         Shop Now
                     </Link>
                 </div>
